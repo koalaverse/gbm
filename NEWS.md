@@ -1,6 +1,5 @@
-# NEWS for gbm package
+# gbm 2.1.4
 
-### Changes for version 2.1.4
 * Switched from `CHANGES` to `NEWS` file.
 * Updated links and maintainer field in `DESCRIPTION` file.
 * Fixed bug caused by factors with unused levels [(#5)](https://github.com/gbm-developers/gbm/issues/5).

@@ -3,7 +3,7 @@
 gbm.fit <- function(x, y, offset = NULL, misc = NULL, distribution = "bernoulli",
                     w = NULL, var.monotone = NULL, n.trees = 100, 
                     interaction.depth = 1, n.minobsinnode = 10, 
-                    shrinkage = 0.001, bag.fraction = 0.5, nTrain = NULL,
+                    shrinkage = 0.1, bag.fraction = 0.5, nTrain = NULL,
                     train.fraction = NULL, keep.data = TRUE, verbose = TRUE,
                     var.names = NULL, response.name = "y", group = NULL) {
   

@@ -1,0 +1,38 @@
+---
+title: "A Guide to the Algorithm Implementations in `gbm`"
+author: "Greg Ridgeway"
+date: "May 23, 2012"
+output: rmarkdown::html_vignette
+bibliography: gbm.bib
+vignette: >
+  %\VignetteIndexEntry{Vignette Title}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.align = "center"
+)
+```
+
+Boosting takes on various forms with different programs using different loss functions, different base models, and different optimization schemes. The `gbm` package takes the approach described in @Friedman:2001 and @Friedman:2002. Some of the terminology differs, mostly due to an effort to cast boosting terms into more standard statistical terminology (e.g. deviance). In addition, the `gbm` package implements boosting for models commonly used in statistics but not commonly associated with boosting. The Cox proportional hazard model, for example, is an incredibly useful model and the boosting framework applies quite readily with only slight modification [@Ridgeway:1999]. Also some algorithms implemented in the `gbm` package differ from the standard implementation. The AdaBoost algorithm [@FreundSchapire:1997] has a particular loss function and a particular optimization algorithm associated with it. The `gbm` implementation of AdaBoost adopts AdaBoost's exponential loss function (its bound on misclassification rate) but uses Friedman's gradient descent algorithm rather than the original one proposed. So the main purposes of this document is to spell out in detail what the `gbm` package implements.
+
+## Gradient boosting
+
+This section essentially presents the derivation of boosting described in @Friedman:2001. The `gbm` package also adopts the stochastic gradient boosting strategy, a small but important tweak on the basic algorithm, described in @Friedman:2002.
+
+### Friedman's gradient boosting machine
+
+@Friedman:2001 and the companion paper [@Friedman:2002] extended the work of @FHT:2000 and laid the ground work for a new generation of boosting algorithms. Using the connection between boosting and optimization, this new work proposes the Gradient Boosting Machine.
+
+In any function estimation problem we wish to find a regression function, $\hat f(\mathbf{x})$, that minimizes the expectation of some loss function, $\Psi(y,f)$, as shown in (\ref{NonparametricRegression1}).
+
+
+
+
+
+
+## References

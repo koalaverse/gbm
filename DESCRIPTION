@@ -7,7 +7,15 @@ Authors@R: c(
          role = "aut"),
   person("Brandon", "Greenwell",
          email = "greenwell.brandon@gmail.com",
-         role = c("aut", "cre")),
+         role = c("aut", "cre"), 
+          comment = c(ORCID = "0000-0002-8120-0084")),
+  person("Bradley", "Boehmke",
+         email = "bradleyboehmke@gmail.com",
+         role = "aut",
+         comment = c(ORCID = "0000-0002-3611-8516")),
+  person("Jay", "Cunningham",
+         email = "james@notbadafterall.com",
+         role = "aut"),       
   person("GBM", "Developers", role = "aut", 
          comment = "https://github.com/gbm-developers")
   )
@@ -22,7 +30,9 @@ Suggests:
   pdp,
   RUnit,
   splines,
-  viridis
+  viridis,
+  rsample,
+  rmarkdown
 Description: An implementation of extensions to Freund and Schapire's AdaBoost 
   algorithm and Friedman's gradient boosting machine. Includes regression 
   methods for least squares, absolute loss, t-distribution loss, quantile 
